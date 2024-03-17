@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/tetris.js"></script>
+    <script src="./js/audio.js"></script>
+    <script src="./js/ajax.js"></script>
+    <script src="./js/ajax-send.js"></script>
+    <script src="https://kit.fontawesome.com/1067176ef6.js" crossorigin="anonymous"></script>
+    <title>PT Tetris</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="player-query">
+            <form id="send">
+                <input type="text" id="question" placeholder="Enter nickname...">
+                <button type="submit" class="send-btn">Send</button>
+            </form>
+        </div>
+        <div class="configs">
+            <div class="config-box">
+                <div class="upper-panel">
+                    <audio id="myAudio">
+                    <source src="#">
+                </audio>
+                    <div class="music-details">
+                        <div class="title"></div>
+                        <div class="author"></div>
+                    </div>
+                    <div class="controls">
+                        <button id="previous"><i class="fas fa-step-backward"></i></button>
+                        <button id="play"><i class="fas fa-play"></i></button>
+                        <button id="next"><i class="fas fa-step-forward"></i></button>
+                    </div>
+                    <div class="volume-up"><i class="fas fa-music"></i>
+                        <input type="range" min="0" max="100" value="20" id="volume">
+                    </div>
+                    <audio id="myAudio-blocks">
+                    <source src="#">
+                </audio>
+                    <div class="volume-up-sounds"><i class="fas fa-volume-up"></i>
+                        <input type="range" min="0" max="100" value="20" id="volume-sounds">
+                    </div>
+                </div>
+                <div class="theme-box">
+                    <div class="text-theme">Themes</div>
+                    <div class="themes">
+                        <div class="theme-candy"></div>
+                        <div class="theme-retro"></div>
+                    </div>
+                </div>
+                <div class="close-config"><i class="fas fa-times"></i></div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="board-box">
+                <div class="game-over">
+                    <div class="over-text">Game</div>
+                    <div class="over-text"> Over</div>
+                </div>
+                <div id="pause-text">Paused</div>
+                <div class="board">
+                </div>
+            </div>
+            <div class="next-segment">
+                <div class="next-block">
+                    <div class="next-text">Next</div>
+                    <div class="shape-flex">
+                        <div class="next-shape"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="score">
+                <div class="score-text">Score</div>
+                <div id="score_display">0</div>
+            </div>
+            <div class="btn-play">
+                <div class="btn-start">Start/Pause</div>
+            </div>
+            <div class="high-score">
+                <div class="score-container">
+                    <div id="highscore-text">Highscore</div>
+                </div>
+                <div class="settings"><i class="fas fa-cogs"></i></div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
